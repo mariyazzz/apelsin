@@ -1,0 +1,89 @@
+.input-group {
+  width: 100%;
+}
+
+.select2-container + .input-group-btn > button {
+  padding: 9px 12px;
+}
+
+.geo-card {
+  max-height: 330px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+}
+
+.navbar-brand > img {
+  height: 23px;
+}
+
+.navbar-brand {
+  padding: 10px;
+}
+
+.checkbox-switchery label {
+  display: block;
+}
+
+.control-label {
+  font-weight: 500;
+}
+
+.checkbox-list .checkbox-switchery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-list label {
+  min-width: 175px;
+}
+
+.select2-selection input {
+  height: 30px;
+}
+
+.select2-selection--multiple:not([class*="bg-"]) .select2-selection__choice {
+  padding: 5px 12px;
+}
+
+
+.icons-list a[data-action="edit"]:after {
+  content: '\e90e';
+  font-size: 11px;
+}
+
+.modal-body .ui-fancytree.fancytree-container.fancytree-plain {
+  max-height: 500px;
+}
+
+.remove_file_button {
+  cursor: pointer;
+  position: relative;
+  top: -26px;
+  float: right;
+  right: 8px;
+}
+
+.stop_word {
+  background-color: #ff8e8e;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.trigger_word {
+  background-color: #43A047;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.post_text_column {
+  word-break: break-all;
+  width: 350px;
+}
+
+select.form-control {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  min-width: 60px;
+}
