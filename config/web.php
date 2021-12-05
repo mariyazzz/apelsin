@@ -41,13 +41,18 @@ $config = [
     'cache'       => [
       'class' => 'yii\caching\FileCache',
     ],
-    'log'         => [
-      'traceLevel' => YII_DEBUG ? 3 : 0,
-      'targets'    => [
-        [
-          'class'  => 'yii\log\FileTarget',
-          'levels' => ['error', 'warning'],
-        ],
+    'mailer' => [
+      'class' => 'yii\swiftmailer\Mailer',
+      'viewPath' => '@backend/mail',
+      'useFileTransport' => false,//set this property to false to send mails to real email addresses
+      //comment the following array to send mail using php's mail function
+      'transport' => [
+        'class' => 'Swift_SmtpTransport',
+        'host' => 'smtp.gmail.com',
+        'username' => 'username@gmail.com',
+        'password' => 'password',
+        'port' => '587',
+        'encryption' => 'tls',
       ],
     ],
     'db'          => require(__DIR__ . '/db.php'),
@@ -76,7 +81,7 @@ if (true || YII_ENV_DEV) {
   $config['bootstrap'][] = 'debug';
   $config['modules']['debug'] = [
     'class'      => 'yii\debug\Module',
-    'allowedIPs' => ['94.25.228.16'],
+    'allowedIPs' => ['*'],
   ];
 
   $config['bootstrap'][] = 'gii';

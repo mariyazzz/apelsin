@@ -83,98 +83,11 @@ AppAsset::register($this);
                     <!-- Main navigation -->
                     <div class="sidebar-category sidebar-category-visible">
                         <div class="category-content no-padding">
-                          <?php
-                          echo \app\components\MenuNav::widget([
-                            'route'        => ltrim(str_replace(["/{$this->context->module->defaultRoute}/{$this->context->defaultAction}", "/{$this->context->defaultAction}"], '', Yii::$app->controller->getRoute()), '/'),
-                            'encodeLabels' => false,
-                            'linkTemplate' => '<a href="{url}"><i class="{iconClass}"></i>{label}</a>',
-                            'options'      => [
-                              'class' => 'navigation navigation-main navigation-accordion',
-                            ],
-                            'items'        => [
-                              [
-                                'iconClass' => 'icon-list',
-                                'visible'   => Yii::$app->user->can(\app\models\User::ROLE_USER),
-                                'label'     => Yii::t('layout', 'Очередь задач'),
-                                'url'       => ['/task'],
-                              ],
-                              [
-                                'iconClass' => 'icon-atom',
-                                'visible'   => Yii::$app->user->can(\app\models\User::ROLE_USER),
-                                'label'     => Yii::t('layout', 'Бренды'),
-                                'url'       => ['/brand'],
-                              ],
-                              [
-                                'iconClass' => 'icon-chess-king',
-                                'url'       => '#',
-                                'label'     => Yii::t('layout', 'Администрирование'),
-                                'visible'   => Yii::$app->user->can(\app\models\User::ROLE_ADMINISTRATOR),
-                                'items'     => [
-                                  [
-                                    'label' => Yii::t('layout', 'Пользователи'),
-                                    'url'   => ['/administration/user'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'RBAC'),
-                                    'url'   => ['/rbac'],
-                                  ],
-                                ],
-                              ],
-                              [
-                                'iconClass' => 'icon-cabinet',
-                                'url'       => '#',
-                                'label'     => Yii::t('layout', 'Instagram'),
-                                'visible'   => Yii::$app->user->can(\app\models\User::ROLE_USER),
-                                'items'     => [
-                                  [
-                                    'label' => Yii::t('layout', 'Посты'),
-                                    'url'   => ['/post'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Хэштеги'),
-                                    'url'   => ['/tag'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Профиль'),
-                                    'url'   => ['/profile'],
-                                  ],
-                                ],
-                              ],
-                              [
-                                'iconClass' => 'icon-gear',
-                                'url'       => '#',
-                                'label'     => Yii::t('layout', 'Общие настройки'),
-                                'visible'   => Yii::$app->user->can(\app\models\User::ROLE_USER),
-                                'items'     => [
-                                  [
-                                    'label' => Yii::t('layout', 'Выключение бота'),
-                                    'url'   => ['/settings/toggle'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Белый список'),
-                                    'url'   => ['/settings/whitelisted'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Слова триггеры'),
-                                    'url'   => ['/settings/triggers'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Стоп слова'),
-                                    'url'   => ['/settings/stops'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Запрос'),
-                                    'url'   => ['/settings/request'],
-                                  ],
-                                  [
-                                    'label' => Yii::t('layout', 'Компы'),
-                                    'url'   => ['/computer'],
-                                  ],
-                                ],
-                              ],
-                            ],
-                          ]);
-                          ?>
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <li>
+                                    <a href="/administration/user"><i class="icon-chess-king"></i>Пользователи</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!-- /main navigation -->
