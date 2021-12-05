@@ -6,7 +6,6 @@ use app\commands\SendEmailCommand;
 use app\models\User;
 use app\models\UserToken;
 use app\modules\user\Module;
-use cheatsheet\Time;
 use Yii;
 use yii\base\Model;
 use yii\helpers\Url;
@@ -102,7 +101,7 @@ class SignupForm extends Model {
       };
       $user->afterSignup($profileData);
       if ($shouldBeActivated) {
-        $token = UserToken::create($user->id, UserToken::TYPE_ACTIVATION, Time::SECONDS_IN_A_DAY);
+        $token = UserToken::create($user->id, UserToken::TYPE_ACTIVATION, 60*60*24);
         Yii::$app->commandBus->handle(new SendEmailCommand([
           'subject' => Yii::t('user', 'Email активации'),
           'view'    => 'activation',

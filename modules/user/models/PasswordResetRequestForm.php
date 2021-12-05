@@ -5,7 +5,6 @@ namespace app\modules\user\models;
 use app\commands\SendEmailCommand;
 use app\models\User;
 use app\models\UserToken;
-use cheatsheet\Time;
 use Yii;
 use yii\base\Model;
 
@@ -47,7 +46,7 @@ class PasswordResetRequestForm extends Model {
     ]);
 
     if ($user) {
-      $token = UserToken::create($user->id, UserToken::TYPE_PASSWORD_RESET, Time::SECONDS_IN_A_DAY);
+      $token = UserToken::create($user->id, UserToken::TYPE_PASSWORD_RESET, 60*60*24);
       if ($user->save()) {
         return Yii::$app->commandBus->handle(new SendEmailCommand([
           'to'      => $this->email,
