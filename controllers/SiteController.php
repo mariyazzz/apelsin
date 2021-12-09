@@ -57,6 +57,6 @@ class SiteController extends Controller {
    * @return string
    */
   public function actionIndex() {
-    return $this->redirect('user');
+    return $this->redirect('?r=user');
   }
 }
