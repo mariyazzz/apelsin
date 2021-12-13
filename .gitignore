@@ -4,8 +4,6 @@
 # windows thumbnail cache
 Thumbs.db
 
-# composer vendor dir
-/vendor
 # runtime dir
 /runtime
 # composer itself is not needed
@@ -21,7 +19,6 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
-vendor/*
 composer.lock
 config/_*
 *.sh
