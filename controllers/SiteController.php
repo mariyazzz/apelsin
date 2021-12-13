@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\CalculateForm;
 use app\modules\user\models\LoginForm;
 use yii\base\BaseObject;
 use yii\filters\AccessControl;
@@ -74,5 +75,15 @@ class SiteController extends Controller {
         'form_model' => $form_model,
       ]);
     }
+  }
+
+  public function actionCalculate() {
+    $model = new CalculateForm();
+    if (\Yii::$app->request->isPost && $model->load(\Yii::$app->request->post()) && $model->validate()) {
+      $model->calculate();
+    }
+    return $this->render('calculate', [
+      'model' => $model,
+    ]);
   }
 }

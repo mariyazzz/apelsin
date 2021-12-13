@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $model \app\models\CalculateForm */
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -64,29 +65,28 @@ use app\models\Yii;
 </h4>
 
 <?php
-
-
-
-
-
+\yii\widgets\Pjax::begin();
 $form = ActiveForm::begin([
     'id'=>'form-id',
-    'options'=>['class'=>'form1-class'],
- ])   ?>
+    'options'=>['class' => 'form1-class', 'data-pjax' => 1],
+ ]);
+?>
 
     <?= $form->field($model,'age')->label('Возраст');?>
     <?= $form->field($model,'growth')->label('Рост в см');?>
     <?= $form->field($model,'weight')->label('Вес в кг');?>
     <?= $form->field($model,'gender')->radioList (['1'=>'Женский','2'=>'Мужской'])->label('Выберите Ваш пол:');?>
-    <?= $form->field($model, 'active_doing')->label('Физическая активность')->dropDownList([
-    '0' => 'Сидячий',
-    '1' => 'Слегка активный',
-    '2' => 'Умеренно активный',
-    '3' => 'Очень активный',
-    '4' => 'Экстремально активный',
-]);?>
+    <?= $form->field($model, 'active_doing')->label('Физическая активность')->dropDownList(\app\models\CalculateForm::$coefficient_labels);?>
     <?= Html::submitButton('Ok',['class'=>'btn btn-primary']) ?>
-    <?php ActiveForm::end()?>  
+    <?php
+    ActiveForm::end();
+    \yii\widgets\Pjax::end();
+    ?>
+  <?php
+  if ($model->result) {
+      echo "Ваш результат: $model->result";
+  }
+  ?>
    
 </div>
     </div>
