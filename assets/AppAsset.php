@@ -17,9 +17,17 @@ class AppAsset extends AssetBundle {
     '/template/css/components.min.css',
     '/template/css/colors.min.css',
     '/css/global.css',
+    'css/site.css',
+    'css/fonts.css',
+    'css/style.css',
   ];
 
   public $js = [
+    'js/core.min.js',
+    'js/html5shiv.min.js',
+    'js/pointer-events.min.js',
+    'js/script.js',
+/*
     '/template/js/plugins/loaders/pace.min.js',
     '/template/js/core/libraries/bootstrap.min.js',
     '/template/js/core/libraries/jquery_ui/core.min.js',
@@ -33,13 +41,11 @@ class AppAsset extends AssetBundle {
     '/template/js/plugins/notifications/sweet_alert.min.js',
     'template/js/plugins/trees/fancytree_all.min.js',
     '/template/js/core/app.js',
-    '/js/yii.confirm.js',
-    '/js/app.js',
+*/
   ];
 
   public $depends = [
     'yii\web\YiiAsset',
+    'yii\bootstrap4\BootstrapAsset',
   ];
-
-  public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
 }

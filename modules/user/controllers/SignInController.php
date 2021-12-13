@@ -17,13 +17,8 @@ use yii\web\BadRequestHttpException;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
 
-/**
- * Class SignInController
- * @package user\modules\user\controllers
- * @author  Eugene Terentev <eugene@terentev.net>
- */
 class SignInController extends \yii\web\Controller {
-  public $layout = '@app/views/layouts/empty';
+  public $layout = '@app/views/layouts/main';
 
   /**
    * @return array

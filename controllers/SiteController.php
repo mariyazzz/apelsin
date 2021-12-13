@@ -2,9 +2,13 @@
 
 namespace app\controllers;
 
+use app\modules\user\models\LoginForm;
+use yii\base\BaseObject;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
+use yii\web\Response;
+use yii\widgets\ActiveForm;
 
 class SiteController extends Controller {
   /**
@@ -34,7 +38,7 @@ class SiteController extends Controller {
 
   public function beforeAction($action) {
     if ($action->id == 'error') {
-      $this->layout = 'empty';
+      $this->layout = 'main';
     }
 
     return parent::beforeAction($action);
@@ -54,9 +58,21 @@ class SiteController extends Controller {
   /**
    * Displays homepage.
    *
-   * @return string
+   * @return string | Response | array
    */
   public function actionIndex() {
-    return $this->redirect('?r=user');
+    $form_model = new LoginForm();
+    if (\Yii::$app->request->isAjax) {
+      $form_model->load($_POST);
+      \Yii::$app->response->format = Response::FORMAT_JSON;
+      return ActiveForm::validate($form_model);
+    }
+    if ($form_model->load(\Yii::$app->request->post()) && $form_model->login()) {
+      return $this->goBack();
+    } else {
+      return $this->render('index', [
+        'form_model' => $form_model,
+      ]);
+    }
   }
 }
