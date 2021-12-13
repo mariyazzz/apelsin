@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\CalculateForm;
+use app\models\ContactForm;
 use app\modules\user\models\LoginForm;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
