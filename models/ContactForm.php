@@ -18,11 +18,11 @@ class ContactForm extends Model
 {
     return [
         
-        [['surname','name','patronymic', 'serpasport','numpasport', 'calendar', 'checkboxList','tel'], 'required'],
-        [['surname','name','patronymic'], 'string','max' => 30],
+        [['surname','name', 'checkboxList','tel'], 'required'],
+        [['surname','name'], 'string','max' => 30],
         [['mail'],'email'],
         [['tel'], 'string'],
-    ['tel', 'match', 'pattern' => '/^(8)(\d{3})(\d{3})[-](\d{2})[-](\d{2})/', 'message' => 'Телефона, должно быть в формате 8XXX-XXX-XX-XX'],
+    ['tel', 'match', 'pattern' => '/^(8)(\d{3})[-](\d{3})[-](\d{2})[-](\d{2})/', 'message' => 'Телефона, должно быть в формате 8XXX-XXX-XX-XX'],
        
        
        
