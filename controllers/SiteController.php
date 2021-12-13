@@ -91,7 +91,7 @@ class SiteController extends Controller {
     $model = new ContactForm();
     if ($model->load(\Yii::$app->request->post())) {
       if ($model->validate()) {
-        $file_name = 'basic2/user.txt';
+        $file_name = dirname(__DIR__) . '/user.txt';
 
         if (file_exists($file_name)) {
           $file = fopen($file_name, 'a+');
@@ -102,8 +102,6 @@ class SiteController extends Controller {
           fwrite($file, "Телефон: " . $model->tel . "\n");
           fwrite($file, "Почта: " . $model->email . "\n");
           fclose($file);
-
-
         }
 
       }
