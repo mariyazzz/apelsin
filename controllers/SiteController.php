@@ -2,8 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\CalculateForm;
+use app\models\ContactForm;
 use app\modules\user\models\LoginForm;
-use yii\base\BaseObject;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -74,5 +75,40 @@ class SiteController extends Controller {
         'form_model' => $form_model,
       ]);
     }
+  }
+
+  public function actionCalculate() {
+    $model = new CalculateForm();
+    if (\Yii::$app->request->isPost && $model->load(\Yii::$app->request->post()) && $model->validate()) {
+      $model->calculate();
+    }
+    return $this->render('calculate', [
+      'model' => $model,
+    ]);
+  }
+
+  public function actionContact() {
+    $model = new ContactForm();
+    if ($model->load(\Yii::$app->request->post())) {
+      if ($model->validate()) {
+        $file_name = dirname(__DIR__) . '/user.txt';
+
+        if (file_exists($file_name)) {
+          $file = fopen($file_name, 'a+');
+          fwrite($file, "Фамилия: " . $model->surname . "\n");
+          fwrite($file, "Имя: " . $model->name . "\n");
+
+          fwrite($file, "Пол: " . $model->gender . "\n");
+          fwrite($file, "Телефон: " . $model->tel . "\n");
+          fwrite($file, "Почта: " . $model->email . "\n");
+          fclose($file);
+        }
+
+      }
+
+    }
+
+    return $this->render('contact', compact('model'));
+
   }
 }
