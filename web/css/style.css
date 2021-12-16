@@ -11000,35 +11000,9 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 	color: #ffffff;
 }
 
-.bg-gray-darker .rd-navbar-static .rd-navbar-nav > li > a:hover,
-.bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover,
-.bg-gradient-2 .rd-navbar-static .rd-navbar-nav > li > a:hover,
-.bg-gradient-2 .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover,
-.bg-gradient-1 .rd-navbar-static .rd-navbar-nav > li > a:hover,
-.bg-gradient-1 .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover,
-.bg-image .rd-navbar-static .rd-navbar-nav > li > a:hover,
-.bg-image .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover,
-.bg-secondary-2 .rd-navbar-static .rd-navbar-nav > li > a:hover,
-.bg-secondary-2 .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover,
-.bg-gradient .rd-navbar-static .rd-navbar-nav > li > a:hover,
-.bg-gradient .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover {
-	color: #ffa900;
-}
 
-.bg-gray-darker .rd-navbar-static .rd-navbar-nav > li > a:hover:before,
-.bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover:before,
-.bg-gradient-2 .rd-navbar-static .rd-navbar-nav > li > a:hover:before,
-.bg-gradient-2 .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover:before,
-.bg-gradient-1 .rd-navbar-static .rd-navbar-nav > li > a:hover:before,
-.bg-gradient-1 .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover:before,
-.bg-image .rd-navbar-static .rd-navbar-nav > li > a:hover:before,
-.bg-image .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover:before,
-.bg-secondary-2 .rd-navbar-static .rd-navbar-nav > li > a:hover:before,
-.bg-secondary-2 .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover:before,
-.bg-gradient .rd-navbar-static .rd-navbar-nav > li > a:hover:before,
-.bg-gradient .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover:before {
-	background-color: #ffa900;
-}
+
+
 
 .bg-gray-darker .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle,
 .bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle,
@@ -11045,20 +11019,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 	color: #ffffff;
 }
 
-.bg-gray-darker .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gradient-2 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gradient-2 .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gradient-1 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gradient-1 .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-image .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-image .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-secondary-2 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-secondary-2 .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gradient .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover,
-.bg-gradient .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-submenu-toggle:hover {
-	color: #ffa900;
-}
+
 
 .bg-gray-darker .rd-navbar-static .rd-navbar-nav > li.focus > a, .bg-gray-darker .rd-navbar-static .rd-navbar-nav > li.opened > a,
 .bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li.focus > a,
@@ -11110,7 +11071,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .bg-gradient .rd-navbar-fullwidth .rd-navbar-nav > li.focus > a:before,
 .bg-gradient .rd-navbar-fullwidth .rd-navbar-nav > li.opened > a:before {
 	background-color: #ffa900;
-}
+}ы
 
 .bg-gray-darker .rd-navbar-static .rd-navbar-nav > li.focus > .rd-navbar-submenu-toggle, .bg-gray-darker .rd-navbar-static .rd-navbar-nav > li.opened > .rd-navbar-submenu-toggle,
 .bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li.focus > .rd-navbar-submenu-toggle,
@@ -11153,20 +11114,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 	color: #ffa900;
 }
 
-.bg-gray-darker .rd-navbar-static .rd-navbar-nav > li.active > a:before,
-.bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li.active > a:before,
-.bg-gradient-2 .rd-navbar-static .rd-navbar-nav > li.active > a:before,
-.bg-gradient-2 .rd-navbar-fullwidth .rd-navbar-nav > li.active > a:before,
-.bg-gradient-1 .rd-navbar-static .rd-navbar-nav > li.active > a:before,
-.bg-gradient-1 .rd-navbar-fullwidth .rd-navbar-nav > li.active > a:before,
-.bg-image .rd-navbar-static .rd-navbar-nav > li.active > a:before,
-.bg-image .rd-navbar-fullwidth .rd-navbar-nav > li.active > a:before,
-.bg-secondary-2 .rd-navbar-static .rd-navbar-nav > li.active > a:before,
-.bg-secondary-2 .rd-navbar-fullwidth .rd-navbar-nav > li.active > a:before,
-.bg-gradient .rd-navbar-static .rd-navbar-nav > li.active > a:before,
-.bg-gradient .rd-navbar-fullwidth .rd-navbar-nav > li.active > a:before {
-	background-color: #ffa900;
-}
+
 
 .bg-gray-darker .rd-navbar-static .rd-navbar-nav > li.active > .rd-navbar-submenu-toggle,
 .bg-gray-darker .rd-navbar-fullwidth .rd-navbar-nav > li.active > .rd-navbar-submenu-toggle,
@@ -18037,7 +17985,7 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 */
 .form1-class{
 	width:400px;
-	padding:40px;
+	margin-left:35%;
 	text-align: center;
 
 
@@ -18055,4 +18003,14 @@ html[dir='rtl'] .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current {
 .heading-1 {
 
 	color:white;
+}
+
+.title_contact{
+	margin-left: 27%;
+}
+
+.resul1-class{
+
+
+	margin-left:35%;
 }

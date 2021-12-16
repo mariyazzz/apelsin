@@ -6,8 +6,6 @@
 use app\assets\AppAsset;
 use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
-use yii\bootstrap4\Nav;
-use yii\bootstrap4\NavBar;
 
 AppAsset::register($this);
 ?>
@@ -50,7 +48,7 @@ AppAsset::register($this);
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin" href="#"></a></li>
                 </ul>
               </div>
-              <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="https://www.templatemonster.com/website-templates/62466.html" target="_blank">buy template now</a></div>
+             
             </div>
             <div class="rd-navbar-inner"> 
               <!-- RD Navbar Panel-->
@@ -58,13 +56,13 @@ AppAsset::register($this);
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <!-- RD Navbar Brand-->
-                <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img class="logo-default" src="images/orange.png" alt="" width="90" height="40"/><img class="logo-inverse" src="images/logo-inverse-208x46.png" alt="" width="308" height="106"/></a></div>
+                <div class="rd-navbar-brand"><a class="brand-name" href="<?= \yii\helpers\Url::to(['site/index']) ?>"><img class="logo-default" src="images/orange.png" alt="" width="90" height="40"/><img class="logo-inverse" src="images/logo-inverse-208x46.png" alt="" width="308" height="106"/></a></div>
               </div>
               <div class="rd-navbar-aside-center">
                 <div class="rd-navbar-nav-wrap">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li class="active"><a href="index.html">Главная</a>
+                  <li> <a href="<?= \yii\helpers\Url::to(['site/index']) ?>">Главная</a>
                     </li>
                     <li> <a href="<?= \yii\helpers\Url::to(['site/calculate']) ?>">Калькулятор</a>
                     </li>
@@ -75,6 +73,7 @@ AppAsset::register($this);
                     <li> <a href="<?= \yii\helpers\Url::to(['site/contact']) ?>">Контакты</a>
                     </li>
                     </li>
+                    
                   </ul>
                 </div>
               </div>
@@ -96,7 +95,7 @@ AppAsset::register($this);
 <footer class="section page-footer page-footer-minimal novi-background bg-cover text-center bg-gray-darker">
         <div class="container container-wide">
           <div class="row row-fix justify-content-sm-center align-items-md-center row-30">
-            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-left"><a href="index.html"><img class="inverse-logo" src="images/orange.png" alt="" width="108" height="30"/></a></div>
+            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-left"><a href="<?= \yii\helpers\Url::to(['site/index']) ?>"><img class="inverse-logo" src="images/orange.png" alt="" width="108" height="30"/></a></div>
             <div class="col-md-10 col-lg-7 col-xl-4">
               <p class="right">&#169;&nbsp;<span class="copyright-year"></span> Калькулятор калорий Апельсин &nbsp;by&nbsp;<a href=" ">Мария Задвинская</a></p>
             </div>

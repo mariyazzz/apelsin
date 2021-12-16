@@ -240,16 +240,16 @@ class User extends ActiveRecord implements IdentityInterface {
    * Creates user profile and application event
    * @param array $profileData
    */
-  public function afterSignup(array $profileData = []) {
+  public function afterSignup(array $profileData = []) { //создаем профиль
     $this->refresh();
     $profile = new UserProfile();
-    $profile->locale = Yii::$app->language;
-    $profile->load($profileData, '');
-    $this->link('userProfile', $profile);
+    $profile->locale = Yii::$app->language; //у профиля есть язык
+    $profile->load($profileData, ''); //также данные из формы(логин, имя)
+    $this->link('userProfile', $profile); //связываем текущую модель с моделью userProfile
     $this->trigger(self::EVENT_AFTER_SIGNUP);
     // Default role
-    $auth = Yii::$app->authManager;
-    $auth->assign($auth->getRole(User::ROLE_UNAUTHORIZED), $this->getId());
+    $auth = Yii::$app->authManager; //новый юзер получает id
+    $auth->assign($auth->getRole(User::ROLE_UNAUTHORIZED), $this->getId()); 
   }
 
   /**
