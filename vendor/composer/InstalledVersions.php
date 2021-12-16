@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'b01551bc86f76d2e5461e21893b4c7b96ae78afd',
+    'reference' => '0c2789e6f5d0cf43be79f90eee3e4404b30c5958',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -162,7 +162,7 @@ private static $installed = array (
       array (
         0 => '1.17.x-dev',
       ),
-      'reference' => 'b85e9d44eae8c52cca7aa0939483611f7232b669',
+      'reference' => '9470ee2b00fea0fb5dba88675daffb68839a71a2',
     ),
     'npm-asset/bootstrap' => 
     array (
@@ -296,7 +296,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'b01551bc86f76d2e5461e21893b4c7b96ae78afd',
+      'reference' => '0c2789e6f5d0cf43be79f90eee3e4404b30c5958',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (
