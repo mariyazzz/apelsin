@@ -4,7 +4,8 @@ namespace app\controllers;
 
 use app\models\CalculateForm;
 use app\models\ContactForm;
-use app\models\User;
+use app\models\Recipe;
+use app\models\RecipeSearch;
 use app\modules\user\models\LoginForm;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -111,11 +112,23 @@ class SiteController extends Controller {
 
   }
 
+  public function actionRecipe() {
+    $id = \Yii::$app->request->get('id');
+    if ($id) {
+      $model = Recipe::findOne($id);
+      return $this->render('recipe_view', [
+        'model' => $model,
+      ]);
+    }
 
-  public function actionRecipe()
-   {
-       return $this->render('recipe');
-   }
+
+    $searchModel = new RecipeSearch();
+    $dataProvider = $searchModel->search($this->request->queryParams);
+
+    return $this->render('recipe', [
+      'dataProvider' => $dataProvider,
+    ]);
+  }
 
    public function actionNews()
    {
