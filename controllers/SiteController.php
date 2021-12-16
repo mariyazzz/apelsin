@@ -90,18 +90,16 @@ class SiteController extends Controller {
   public function actionContact() {
     $model = new ContactForm();
     if ($model->load(\Yii::$app->request->post())) {
-      if ($model->validate()) {
+      if ($model->validate()) { //если валидация пройдена
         $file_name = dirname(__DIR__) . '/user.txt';
 
-        if (file_exists($file_name)) {
-          $file = fopen($file_name, 'a+');
-          fwrite($file, "Фамилия: " . $model->surname . "\n");
+        if (file_exists($file_name)) {  //если такой файл существует
+          $file = fopen($file_name, 'a+');  //открыть его
+          fwrite($file, "Фамилия: " . $model->surname . "\n"); //записать данные
           fwrite($file, "Имя: " . $model->name . "\n");
-
-          fwrite($file, "Пол: " . $model->gender . "\n");
           fwrite($file, "Телефон: " . $model->tel . "\n");
-          fwrite($file, "Почта: " . $model->email . "\n");
-          fclose($file);
+          fwrite($file, "Почта: " . $model->mail . "\n");
+          fclose($file); //закрыть
         }
 
       }
@@ -111,4 +109,16 @@ class SiteController extends Controller {
     return $this->render('contact', compact('model'));
 
   }
+
+
+  public function actionRecipe()
+   {
+       return $this->render('recipe');
+   }
+
+   public function actionNews()
+   {
+       return $this->render('news');
+   }
+
 }

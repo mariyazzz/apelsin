@@ -89,13 +89,13 @@ class SignupForm extends Model {
    * @return User|null the saved model or null if saving fails
    */
   public function signup($profileData = []) {
-    if ($this->validate()) {
-      $user = new User();
+    if ($this->validate()) {  //Сначала проходим валидацию
+      $user = new User(); //Создается модель user
       $user->username = $this->username;
       $user->email = $this->email;
       $user->status = User::STATUS_ACTIVE;
-      $user->setPassword($this->password);
-      if (!$user->save()) {
+      $user->setPassword($this->password); //это функция generatepassword hash
+      if (!$user->save()) {  //Сохраняем юзера, в противном случае возвращем null
         return null;
       };
       $user->afterSignup($profileData);

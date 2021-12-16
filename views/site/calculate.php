@@ -59,10 +59,10 @@ use app\models\Yii;
 
 
 
-<div class="calculate">
-                <h4 class="title_contact">
+<div class="calculate1">
+               <p> <h4 class="title_contact">
         Рассчитай свою норму прямо сейчас!
-</h4>
+</h4></p>
 
 <?php
 \yii\widgets\Pjax::begin();
@@ -82,12 +82,12 @@ $form = ActiveForm::begin([
     ActiveForm::end();
     \yii\widgets\Pjax::end();
     ?>
-  <?php
+ <?php
   if ($model->result) {
-      echo "Ваш результат: $model->result";
+      echo "<h6 class ='resul1'>Ваш результат: $model->result <h6>";
   }
   ?>
-   
+   </div>
 </div>
     </div>
 
