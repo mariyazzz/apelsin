@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\CalculateForm;
 use app\models\ContactForm;
+use app\models\User;
 use app\modules\user\models\LoginForm;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -19,10 +20,10 @@ class SiteController extends Controller {
     return [
       'access' => [
         'class' => AccessControl::className(),
-        'only'  => ['logout'],
+        'only'  => ['logout', 'calculate'],
         'rules' => [
           [
-            'actions' => ['logout'],
+            'actions' => ['logout', 'calculate'],
             'allow'   => true,
             'roles'   => ['@'],
           ],
