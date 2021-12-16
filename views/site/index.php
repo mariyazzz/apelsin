@@ -39,8 +39,7 @@ $this->title = 'Апельсин';
                                 <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
                                     <h3>Как еда влияет на нашу жизнь</h3>
                                     <p class="text-spacing-sm">Еда больше чем на 50% определяет наше долгосрочное здоровье, заболеваемость самыми страшными болезнями века и очень
-                                        сильно влияет на бодрость и эффективность каждый день.</p><a class="button button-default-outline button-nina button-sm" href="#">Читать
-                                        далее</a>
+                                        сильно влияет на бодрость и эффективность каждый день.</p><a class="button button-default-outline button-nina button-sm" href="#">Читать далее</a>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +79,8 @@ $this->title = 'Апельсин';
                           $name = Yii::$app->user->getIdentity()->userProfile->fullname;
                           echo "<h4>Здравствуйте, {$name}!</h4>";
                           echo '<a href="/?r=/user/sign-in/logout"><i class="icon-switch2"></i>Выйти</a>';
-
+                          echo  '<p><a href="apelsin/web/index.php?r=/user/"> Мой профиль</a></p>';
+                         
                         } else {
                       ?>
                         <h4>Войдите в Ваш аккаунт</h4>
@@ -206,7 +206,7 @@ $this->title = 'Апельсин';
 <section class="section section-lg bg-gray-lighter novi-background bg-cover text-center">
     <div class="container container-wide">
         <h3>Калькулятор здорового питания</h3>
-        <a class="button button-secondary button-nina" href="<?= \yii\helpers\Url::to(['site/calculate']) ?>">попробовать</a>
+        <a class="button button-secondary button-nina" href="<?= \yii\helpers\Url::to(['site/index']) ?>">Зарегистрируйтесь прямо сейчас!</a>
         <div class="row row-50 justify-content-sm-center text-left">
             <div class="col-sm-10 col-md-6 col-xl-3">
                 <article class="box-minimal box-minimal-border">
@@ -330,7 +330,7 @@ $this->title = 'Апельсин';
 <section class="section section-lg text-center bg-gray-lighter novi-background bg-cover">
     <div class="container container-bigger">
         <h3>Отзывы</h3>
-        <div class="divider divider-decorate"></div>
+       
         <!-- Owl Carousel-->
         <div class="owl-carousel owl-layout-1" data-items="1" data-dots="true" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false"
              data-autoplay="true">

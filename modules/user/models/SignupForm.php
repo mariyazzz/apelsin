@@ -89,47 +89,20 @@ class SignupForm extends Model {
    * @return User|null the saved model or null if saving fails
    */
   public function signup($profileData = []) {
-    if ($this->validate()) {
-      $shouldBeActivated = $this->shouldBeActivated();
-      $user = new User();
+    if ($this->validate()) {  //Сначала проходим валидацию
+      $user = new User(); //Создается модель user
       $user->username = $this->username;
       $user->email = $this->email;
-      $user->status = $shouldBeActivated ? User::STATUS_NOT_ACTIVE : User::STATUS_ACTIVE;
-      $user->setPassword($this->password);
-      if (!$user->save()) {
+      $user->status = User::STATUS_ACTIVE;
+      $user->setPassword($this->password); //это функция generatepassword hash
+      if (!$user->save()) {  //Сохраняем юзера, в противном случае возвращем null
         return null;
       };
       $user->afterSignup($profileData);
-      if ($shouldBeActivated) {
-        $token = UserToken::create($user->id, UserToken::TYPE_ACTIVATION, 60*60*24);
-        Yii::$app->commandBus->handle(new SendEmailCommand([
-          'subject' => Yii::t('user', 'Email активации'),
-          'view'    => 'activation',
-          'to'      => $this->email,
-          'params'  => [
-            'url' => Url::to(['/user/sign-in/activation', 'token' => $token->token], true),
-          ],
-        ]));
-      }
 
       return $user;
     }
 
     return null;
-  }
-
-  /**
-   * @return bool
-   */
-  public function shouldBeActivated() {
-    /** @var Module $userModule */
-    $userModule = Yii::$app->getModule('user');
-    if (!$userModule) {
-      return false;
-    } elseif ($userModule->shouldBeActivated) {
-      return true;
-    } else {
-      return false;
-    }
   }
 }

@@ -14,10 +14,10 @@ $this->title = Yii::t('user', 'Пользователи');
         <h2 class="panel-title"><?= Html::encode($this->title) ?></h2>
     </div>
     <div class="panel-body">
-        <p>
+        <p> <p>
           <?= Html::a(Yii::t('user', 'Создать Пользователя'), ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
-      <?= GridView::widget([
+</p> </p>
+       <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel'  => $searchModel,
         'columns'      => [
@@ -54,13 +54,13 @@ $this->title = Yii::t('user', 'Пользователи');
             'buttons'  => [
               'update' => function($url, $model) {
                 return \yii\helpers\Html::a('<span class="icon-pencil"></span>', $url, [
-                  'title' => Yii::t('global', 'Редактировать'),
+                  'title' => Yii::t('global', '->'),
                   'class' => 'btn btn-info',
                 ]);
               },
               'delete' => function($url, $model) {
                 return \yii\helpers\Html::a('<span class="icon-trash"></span>', $url, [
-                  'title'        => Yii::t('global', 'Удалить'),
+                  'title'        => Yii::t('global', 'x'),
                   'data-confirm' => Yii::t('global', 'Вы уверены что хотите удалить?'),
                   'data-method'  => 'post',
                   'class'        => 'btn btn-danger',
