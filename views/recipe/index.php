@@ -27,12 +27,19 @@ $this->title = 'Recipes';
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'user_id',
+          [
+            'label'              => 'User',
+            'format'             => 'raw',
+            'attribute'          => 'user_id',
+            'value'              => 'user.userProfile.fullname',
+            'filter'             => \app\models\User::getList(),
+            'filterInputOptions' => ['class' => 'form-control'],
+          ],
             'title',
-            'photo',
+            'photo:image',
             'calories',
-            //'created_at',
-            //'updated_at',
+            'created_at:datetime',
+            'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
