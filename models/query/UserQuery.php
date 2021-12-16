@@ -8,7 +8,6 @@ use yii\db\ActiveQuery;
 /**
  * Class UserQuery
  * @package app\models\query
- * @author  Eugene Terentev <eugene@terentev.net>
  */
 class UserQuery extends ActiveQuery {
   /**
