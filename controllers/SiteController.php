@@ -120,6 +120,4 @@ class SiteController extends Controller {
    {
        return $this->render('news');
    }
-
->>>>>>> 2fa5b194501eaebd065533d2a1ab0f54de1be807
 }
