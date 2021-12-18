@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '0c2789e6f5d0cf43be79f90eee3e4404b30c5958',
+    'reference' => '44f957e2e834012dd58fa04be1b8dae1d1a23dc5',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -126,25 +126,6 @@ private static $installed = array (
       ),
       'reference' => '2b2461bed9e15305486319ee552bafca75d1cdaa',
     ),
-    'doctrine/lexer' => 
-    array (
-      'pretty_version' => '1.3.x-dev',
-      'version' => '1.3.9999999.9999999-dev',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '59bfb3b9be04237be4cd1afea9bbb58794c25ce8',
-    ),
-    'egulias/email-validator' => 
-    array (
-      'pretty_version' => '3.x-dev',
-      'version' => '3.9999999.9999999.9999999-dev',
-      'aliases' => 
-      array (
-        0 => '9999999-dev',
-      ),
-      'reference' => '007bfd424ef94109d2270af5b0e65011705413db',
-    ),
     'ezyang/htmlpurifier' => 
     array (
       'pretty_version' => 'v4.13.0',
@@ -211,15 +192,6 @@ private static $installed = array (
       ),
       'reference' => '2ae37329ee82f91efadc282cc2d527fd6065a5ef',
     ),
-    'swiftmailer/swiftmailer' => 
-    array (
-      'pretty_version' => 'v6.3.0',
-      'version' => '6.3.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8a5d5072dca8f48460fce2f4131fcc495eec654c',
-    ),
     'symfony/deprecation-contracts' => 
     array (
       'pretty_version' => '2.5.x-dev',
@@ -228,56 +200,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '6f981ee24cf69ee7ce9736146d1c57c2780598a8',
-    ),
-    'symfony/polyfill-iconv' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => 'fd324208ec59a39ebe776e6e9ec5540ad4f40aaa',
-    ),
-    'symfony/polyfill-intl-idn' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => '749045c69efb97c70d25d7463abba812e91f3a44',
-    ),
-    'symfony/polyfill-intl-normalizer' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => '8590a5f561694770bdcd3f9b5c69dde6945028e8',
-    ),
-    'symfony/polyfill-mbstring' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => '0abb51d2f102e00a4eefcf46ba7fec406d245825',
-    ),
-    'symfony/polyfill-php72' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => '9a142215a36a3888e30d0a9eeea9766764e96976',
     ),
     'yiisoft/yii2' => 
     array (
@@ -296,7 +218,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '0c2789e6f5d0cf43be79f90eee3e4404b30c5958',
+      'reference' => '44f957e2e834012dd58fa04be1b8dae1d1a23dc5',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (
@@ -364,16 +286,6 @@ private static $installed = array (
         0 => '2.0.x-dev',
       ),
       'reference' => '4e65aca79a0383e49698616f4aca59254f9eae59',
-    ),
-    'yiisoft/yii2-swiftmailer' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-        0 => '2.1.x-dev',
-      ),
-      'reference' => 'dc5376e47b37af5703ce5da23e1f9ff9944d9c4d',
     ),
   ),
 );

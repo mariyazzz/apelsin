@@ -121,3 +121,8 @@ a.desc:after {
     display: inline-block;
     margin-left: 5px;
 }
+
+.list-view > div {
+    width: 300px;
+    display: inline-block;
+}

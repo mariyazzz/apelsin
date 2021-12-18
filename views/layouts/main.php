@@ -63,15 +63,15 @@ AppAsset::register($this);
                 <div class="rd-navbar-nav-wrap">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                  <li> <a href="<?= \yii\helpers\Url::to(['site/index']) ?>">Главная</a>
+                  <li> <a href="<?= \yii\helpers\Url::to(['/site/index']) ?>">Главная</a>
                     </li>
-                    <li> <a href="<?= \yii\helpers\Url::to(['site/calculate']) ?>">Калькулятор</a>
+                    <li> <a href="<?= \yii\helpers\Url::to(['/site/calculate']) ?>">Калькулятор</a>
                     </li>
-                    <li> <a href="<?= \yii\helpers\Url::to(['site/recipe']) ?>">Рецепты</a>
+                    <li> <a href="<?= \yii\helpers\Url::to(['/site/recipe']) ?>">Рецепты</a>
                     </li>
-                    <li> <a href="<?= \yii\helpers\Url::to(['site/news']) ?>">Полезные советы и новости</a>
+                    <li> <a href="<?= \yii\helpers\Url::to(['/site/news']) ?>">Полезные советы и новости</a>
                     </li>
-                    <li> <a href="<?= \yii\helpers\Url::to(['site/contact']) ?>">Контакты</a>
+                    <li> <a href="<?= \yii\helpers\Url::to(['/site/contact']) ?>">Контакты</a>
                     </li>
                     </li>
                     
