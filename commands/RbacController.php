@@ -20,11 +20,9 @@ class RbacController extends Controller {
 
   public function actionUpdate() {
     $administrator = $this->addRole(User::ROLE_ADMINISTRATOR);
-    $unauthorized = $this->addRole(User::ROLE_UNAUTHORIZED);
     $user = $this->addRole(User::ROLE_USER);
     $rbac = $this->addPermission('rbac');
 
-    $this->addChild($user, $unauthorized);
     $this->addChild($administrator, $user);
     $this->addChild($administrator, $rbac);
   }

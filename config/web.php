@@ -17,7 +17,6 @@ $config = [
   'modules'    => [
     'user'           => [
       'class' => 'app\modules\user\Module',
-      //'shouldBeActivated' => true
     ],
     'administration' => [
       'class' => 'app\modules\administration\Module',

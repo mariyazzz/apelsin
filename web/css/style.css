@@ -12830,10 +12830,6 @@ html.rd-navbar-fixed-linked .page {
 	}
 }
 
-.rd-navbar-corporate .rd-navbar-top-panel .rd-navbar-top-panel-inner:last-of-type {
-	display: none;
-}
-
 .rd-navbar-corporate .box-inline.list-inline-item {
 	display: inline-block;
 }

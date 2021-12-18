@@ -19,7 +19,7 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
-composer.lock
+user.txt
 config/_*
 *.sh
 web/storage/*

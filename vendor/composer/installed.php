@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0d738b9211e614c2983aba43af1917cd1ab17a57',
+    'reference' => '0c2789e6f5d0cf43be79f90eee3e4404b30c5958',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -139,7 +139,7 @@
       array (
         0 => '1.17.x-dev',
       ),
-      'reference' => 'b85e9d44eae8c52cca7aa0939483611f7232b669',
+      'reference' => '9470ee2b00fea0fb5dba88675daffb68839a71a2',
     ),
     'npm-asset/bootstrap' => 
     array (
@@ -273,7 +273,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0d738b9211e614c2983aba43af1917cd1ab17a57',
+      'reference' => '0c2789e6f5d0cf43be79f90eee3e4404b30c5958',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (

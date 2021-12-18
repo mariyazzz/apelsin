@@ -37,7 +37,6 @@ class User extends ActiveRecord implements IdentityInterface {
   const STATUS_ACTIVE     = 2;
   const STATUS_DELETED    = 3;
 
-  const ROLE_UNAUTHORIZED  = 'unauthorized';
   const ROLE_USER          = 'user';
   const ROLE_ADMINISTRATOR = 'administrator';
 
@@ -249,7 +248,7 @@ class User extends ActiveRecord implements IdentityInterface {
     $this->trigger(self::EVENT_AFTER_SIGNUP);
     // Default role
     $auth = Yii::$app->authManager; //новый юзер получает id
-    $auth->assign($auth->getRole(User::ROLE_UNAUTHORIZED), $this->getId()); 
+    $auth->assign($auth->getRole(User::ROLE_USER), $this->getId());
   }
 
   /**

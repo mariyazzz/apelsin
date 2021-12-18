@@ -113,3 +113,11 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.recipe {
+    width: 300px;
+    margin-top: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    margin-left: 5px;
+}
