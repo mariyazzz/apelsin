@@ -9,7 +9,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * RecipeController implements the CRUD actions for Recipe model.
+ * RecipeController implements actions for admin
  */
 class RecipeController extends Controller
 {
